@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 
+const getIsLoggedIn = (state) => state.authorization.isLoggedIn;
 const getTokenSelector = (state) => state.authorization.token;
 const getBooksSelector = (state) => state.books;
 const getFilter = (state) => state.books.filter;
@@ -21,4 +22,5 @@ export default {
   getBooksSelector,
   getFiltredBooks,
   getFilter,
+  getIsLoggedIn,
 };
