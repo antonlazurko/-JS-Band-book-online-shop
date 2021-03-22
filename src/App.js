@@ -22,7 +22,7 @@ function App() {
       <AppBar />
       <Suspense fallback={<div>Downloading...</div>}>
         <Switch>
-          <Route path="/" exact>
+          <Route exact path="/catalog/">
             {isLoggedIn ? <CatalogView /> : <Redirect to="/login" />}
           </Route>
           <Route path="/login">

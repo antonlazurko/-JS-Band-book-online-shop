@@ -1,33 +1,25 @@
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import selectors from '../../redux/books/selectors';
+// import { useSelector } from 'react-redux';
+// import selectors from '../../redux/books/selectors';
 
-const Navigation = () => {
-  const isLoggedIn = useSelector(selectors.getIsLoggedIn);
-  return (
-    <>
-      {!isLoggedIn ? (
-        <>
-          <NavLink
-            to="/login"
-            className="{link}"
-            activeClassName="{activeLink}"
-          >
-            Login
-          </NavLink>
-        </>
-      ) : (
-        <>
-          <NavLink
-            to="/catalog"
-            className="{link}"
-            activeClassName="{activeLink}"
-          >
-            Catalog
-          </NavLink>
-        </>
-      )}
-    </>
-  );
-};
+const Navigation = () => (
+  <nav>
+    <NavLink
+      exact
+      to="/catalog/"
+      className="{styles.link}"
+      activeClassName="{styles.activeLink}"
+    >
+      Catalog
+    </NavLink>
+
+    <NavLink
+      to="/login"
+      className="{styles.link}"
+      activeClassName="{styles.activeLink}"
+    >
+      Login
+    </NavLink>
+  </nav>
+);
 export default Navigation;
