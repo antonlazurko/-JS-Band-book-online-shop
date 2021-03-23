@@ -6,7 +6,6 @@ const userLogin = async (userName) => {
   const { data } = await axios.post('signin', {
     username: userName,
   });
-  console.log(data);
   return data;
 };
 
@@ -29,11 +28,17 @@ const getBookById = async (id, token) => {
 };
 
 const purchase = async (books, token) => {
-  const { data } = await axios.get('books/purchase', {
-    headers: {
-      Authorization: `Bearer ${token}`,
+  const { data } = await axios.post(
+    'purchase',
+    {
+      books: [...books],
     },
-  });
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  );
   return data;
 };
 

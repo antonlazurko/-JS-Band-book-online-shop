@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
 
 import booksOperations from './books-operations';
-import changeFilter from './books-actions';
+import booksActions from './books-actions';
+import cart from '../cart/cart-reducers';
 
 const authInitialState = {
   userName: '',
@@ -12,6 +13,12 @@ const authInitialState = {
 };
 
 const authorization = createReducer(authInitialState, {
+  [booksActions.signOutAction]: () => ({
+    userName: authInitialState.username,
+    avatar: authInitialState.avatar,
+    token: authInitialState.token,
+    isLoggedIn: authInitialState.isLoggedIn,
+  }),
   [booksOperations.logIn.fulfilled]: (_, { payload }) => ({
     userName: payload.username,
     avatar: payload.avatar,
@@ -21,7 +28,7 @@ const authorization = createReducer(authInitialState, {
 });
 
 const books = createReducer([], {
-  [booksOperations.getBooks.fulfilled]: (_, { payload }) => [...payload],
+  [booksOperations.getBooks.fulfilled]: (_, { payload }) => payload,
 });
 
 const bookDetails = createReducer(
@@ -32,7 +39,7 @@ const bookDetails = createReducer(
 );
 
 const filter = createReducer('', {
-  [changeFilter]: (_, { payload }) => payload,
+  [booksActions.changeFilter]: (_, { payload }) => payload,
 });
 
 const isLoading = createReducer(false, {
@@ -63,4 +70,5 @@ export default combineReducers({
   bookDetails,
   error,
   filter,
+  cart,
 });

@@ -1,8 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { useSelector } from 'react-redux';
 
 import booksServices from '../../services/services';
-import selectors from './selectors';
 
 const logIn = createAsyncThunk(
   'auth/login',
@@ -17,9 +15,8 @@ const logIn = createAsyncThunk(
 
 const getBooks = createAsyncThunk(
   'books/getBooks',
-  async (_, { rejectWithValue }) => {
+  async (token, { rejectWithValue }) => {
     try {
-      const token = useSelector(selectors.getTokenSelector);
       return await booksServices.getBooks(token);
     } catch {
       return rejectWithValue();
@@ -29,9 +26,8 @@ const getBooks = createAsyncThunk(
 
 const getBookById = createAsyncThunk(
   'books/getBookById',
-  async (id, { rejectWithValue }) => {
+  async ({ id, token }, { rejectWithValue }) => {
     try {
-      const token = useSelector(selectors.getTokenSelector);
       return await booksServices.getBookById(id, token);
     } catch {
       return rejectWithValue();
