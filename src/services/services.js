@@ -11,11 +11,15 @@ const userLogin = async (userName) => {
 };
 
 const getBooks = async (token) => {
+  console.log('books');
+
   const { data } = await axios.get('books', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   });
+  console.log(data);
+
   return data;
 };
 

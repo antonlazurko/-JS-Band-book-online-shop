@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
 
 import booksOperations from './books-operations';
-import changeFilter from './books-actions';
+import booksActions from './books-actions';
 
 const authInitialState = {
   userName: '',
@@ -32,7 +32,7 @@ const bookDetails = createReducer(
 );
 
 const filter = createReducer('', {
-  [changeFilter]: (_, { payload }) => payload,
+  [booksActions.changeFilter]: (_, { payload }) => payload,
 });
 
 const isLoading = createReducer(false, {

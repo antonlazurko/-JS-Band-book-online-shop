@@ -17,9 +17,10 @@ const logIn = createAsyncThunk(
 
 const getBooks = createAsyncThunk(
   'books/getBooks',
-  async (_, { rejectWithValue }) => {
+  async (token, { rejectWithValue }) => {
     try {
-      const token = useSelector(selectors.getTokenSelector);
+      // const token = useSelector(selectors.getTokenSelector);
+      // console.log('books');
       return await booksServices.getBooks(token);
     } catch {
       return rejectWithValue();
