@@ -1,13 +1,15 @@
 import { useHistory } from 'react-router-dom';
+import styles from './Card.module.css';
 
 const Card = ({ book }) => {
   const history = useHistory();
   return (
-    <li>
-      <img src={book.cover} width="200px" />
-      <h2>{book.title}</h2> <h3>{book.author}</h3>
-      <h4>{book.price}</h4>
+    <li className={styles.card}>
+      <img src={book.cover} width="100%" />
+      <h4>{book.title}</h4> <h5>{book.author}</h5>
+      <h6>{book.price}$</h6>
       <button
+        className="btn btn-outline-secondary"
         onClick={() => {
           history.push(`/catalog/${book.id}`);
         }}

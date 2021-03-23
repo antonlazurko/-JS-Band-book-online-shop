@@ -4,6 +4,7 @@ import booksOperations from '../../redux/books/books-operations';
 import booksActions from '../../redux/books/books-actions';
 import selectors from '../../redux/books/selectors';
 import Card from '../../components/Card/Card';
+import styles from './CatalogView.module.css';
 
 const CatalogView = () => {
   const dispatch = useDispatch();
@@ -44,8 +45,13 @@ const CatalogView = () => {
     <>
       {booksByPrice && (
         <>
-          <div className="filtres">
+          <div className={styles.filters}>
             <input
+              style={{
+                width: '250px',
+                marginRight: '15px',
+              }}
+              className="input-group"
               value={filterValue}
               type="text"
               autoComplete="off"
@@ -53,10 +59,11 @@ const CatalogView = () => {
               onChange={(e) => setFilterValue(e.target.value)}
             />
             <form
+              className="input-group"
               method="post"
               onChange={(e) => setSelectValue(e.target.value)}
             >
-              <select size="3" name="price">
+              <select name="price">
                 <option defaultValue="">Price</option>
                 <option value="0">0 &lt; price &lt; 25</option>
                 <option value="1">25 &lt; price &lt; 50</option>
@@ -64,7 +71,7 @@ const CatalogView = () => {
               </select>
             </form>
           </div>
-          <ul>
+          <ul className={styles.booksList}>
             {booksByPrice.map((book) => (
               <Card book={book} key={book.id} />
             ))}
