@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import booksOperations from '../../redux/books/books-operations';
 import selectors from '../../redux/books/selectors';
+import cartActions from '../../redux/cart/cart-actions';
 
 const BookView = () => {
   const dispatch = useDispatch();
@@ -35,7 +36,7 @@ const BookView = () => {
         <label
           htmlFor="bookCount"
           onChange={(e) => {
-            setBooksCount(e.target.value);
+            setBooksCount(Number(e.target.value));
           }}
         >
           Count
@@ -51,7 +52,14 @@ const BookView = () => {
         <button
           type="button"
           onClick={() => {
-            console.log('add');
+            dispatch(
+              cartActions.addToCart({
+                bookId: id,
+                title,
+                price,
+                count: booksCount,
+              }),
+            );
           }}
         >
           Add to cart

@@ -28,11 +28,17 @@ const getBookById = async (id, token) => {
 };
 
 const purchase = async (books, token) => {
-  const { data } = await axios.get('books/purchase', {
-    headers: {
-      Authorization: `Bearer ${token}`,
+  const { data } = await axios.post(
+    'books/purchase',
+    {
+      books: [...books],
     },
-  });
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  );
   return data;
 };
 

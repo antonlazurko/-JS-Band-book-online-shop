@@ -13,6 +13,7 @@ import './App.css';
 const LogInView = lazy(() => import('./views/LogInView/LogInView'));
 const CatalogView = lazy(() => import('./views/CatalogView/CatalogView'));
 const BookView = lazy(() => import('./views/BookView/BookView'));
+const Cart = lazy(() => import('./views/Cart/Cart'));
 const NotFoundView = lazy(() => import('./views/NotFoundView/NotFoundView'));
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/catalog/:id">
             {isLoggedIn ? <BookView /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/cart">
+            {isLoggedIn ? <Cart /> : <Redirect to="/login" />}
           </Route>
           <Route path="/login">
             <LogInView />

@@ -3,6 +3,7 @@ import { createReducer } from '@reduxjs/toolkit';
 
 import booksOperations from './books-operations';
 import booksActions from './books-actions';
+import cart from '../cart/cart-reducers';
 
 const authInitialState = {
   userName: '',
@@ -63,4 +64,5 @@ export default combineReducers({
   bookDetails,
   error,
   filter,
+  cart,
 });
