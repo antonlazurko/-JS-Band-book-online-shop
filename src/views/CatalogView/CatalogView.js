@@ -49,6 +49,7 @@ const CatalogView = () => {
               value={filterValue}
               type="text"
               autoComplete="off"
+              placeholder="search"
               onChange={(e) => setFilterValue(e.target.value)}
             />
             <form

@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import booksActions from '../../redux/books/books-actions';
 import selectors from '../../redux/books/selectors';
 
-console.log(booksActions);
 const AppBar = () => {
   const dispatch = useDispatch();
   const userName = useSelector(selectors.getUserName);

@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import cartSelectors from '../../redux/cart/cart-selectors';
 import services from '../../services/services';
 import selectors from '../../redux/books/selectors';
+import cart from '../../images/cart.png';
 
 const Cart = () => {
   const cartInfo = useSelector(cartSelectors.getCartInfo);
@@ -9,7 +10,12 @@ const Cart = () => {
 
   return (
     <>
-      {cartInfo.length !== 0 && (
+      {cartInfo.length === 0 ? (
+        <p>
+          <img src={cart} alt="cart" />
+          Cart empty
+        </p>
+      ) : (
         <div>
           <button
             type="button"
