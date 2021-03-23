@@ -1,0 +1,21 @@
+.book{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;}
+.bookField{
+    display: flex;
+    flex-direction: row;
+}
+.bookDescription{
+    width: 40%;}
+.title{
+    width: 20%;
+}
+.cartField{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    height: auto;
+    border: 1px solid black;
+}
