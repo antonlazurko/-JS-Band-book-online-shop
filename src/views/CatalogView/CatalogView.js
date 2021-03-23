@@ -7,32 +7,69 @@ import Card from '../../components/Card/Card';
 
 const CatalogView = () => {
   const dispatch = useDispatch();
-  const books = useSelector(selectors.getBooksSelector);
-  const filtredBooks = useSelector(selectors.getFiltredBooks);
   const token = useSelector(selectors.getTokenSelector);
+  useEffect(() => {
+    dispatch(booksOperations.getBooks(token));
+  }, []);
+  const filtredBooks = useSelector(selectors.getFiltredBooks);
   const [filterValue, setFilterValue] = useState('');
-
+  const [selectValue, setSelectValue] = useState('');
+  const [booksByPrice, setBooksByPrice] = useState(filtredBooks);
   useEffect(() => {
     dispatch(booksActions.changeFilter(filterValue));
   }, [filterValue]);
   useEffect(() => {
-    dispatch(booksOperations.getBooks(token));
-  }, []);
+    switch (selectValue) {
+      case '':
+        setBooksByPrice(filtredBooks);
+        break;
+      case '0':
+        setBooksByPrice(filtredBooks.filter((book) => book.price <= 25));
+        break;
+      case '1':
+        setBooksByPrice(
+          filtredBooks.filter((book) => book.price > 25 && book.price <= 50),
+        );
+        break;
+      case '2':
+        setBooksByPrice(filtredBooks.filter((book) => book.price > 50));
+        break;
+      default:
+        setBooksByPrice(filtredBooks);
+        break;
+    }
+  }, [selectValue, filtredBooks]);
+
   return (
     <>
-      {books && (
-        <ul>
-          <input
-            value={filterValue}
-            type="text"
-            autoComplete="off"
-            autoFocus
-            onChange={(e) => setFilterValue(e.target.value)}
-          />
-          {filtredBooks.map((book) => (
-            <Card book={book} key={book.id} />
-          ))}
-        </ul>
+      {booksByPrice && (
+        <>
+          <div className="filtres">
+            <input
+              value={filterValue}
+              type="text"
+              autoComplete="off"
+              autoFocus
+              onChange={(e) => setFilterValue(e.target.value)}
+            />
+            <form
+              method="post"
+              onChange={(e) => setSelectValue(e.target.value)}
+            >
+              <select size="3" name="hero[]">
+                <option defaultValue="">Price</option>
+                <option value="0">0 &lt; price &lt; 25</option>
+                <option value="1">25 &lt; price &lt; 50</option>
+                <option value="2">50 &gt;</option>
+              </select>
+            </form>
+          </div>
+          <ul>
+            {booksByPrice.map((book) => (
+              <Card book={book} key={book.id} />
+            ))}
+          </ul>
+        </>
       )}
     </>
   );
