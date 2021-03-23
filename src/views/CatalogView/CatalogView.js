@@ -49,14 +49,13 @@ const CatalogView = () => {
               value={filterValue}
               type="text"
               autoComplete="off"
-              autoFocus
               onChange={(e) => setFilterValue(e.target.value)}
             />
             <form
               method="post"
               onChange={(e) => setSelectValue(e.target.value)}
             >
-              <select size="3" name="hero[]">
+              <select size="3" name="price">
                 <option defaultValue="">Price</option>
                 <option value="0">0 &lt; price &lt; 25</option>
                 <option value="1">25 &lt; price &lt; 50</option>

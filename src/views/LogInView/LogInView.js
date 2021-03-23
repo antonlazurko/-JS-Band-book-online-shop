@@ -20,7 +20,7 @@ const LogInView = () => {
     <div className="login">
       <img />
       <form onSubmit={onSubmit}>
-        <label></label>
+        <label>Name</label>
         <input
           value={filterValue}
           type="text"

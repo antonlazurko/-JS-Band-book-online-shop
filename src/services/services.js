@@ -6,20 +6,15 @@ const userLogin = async (userName) => {
   const { data } = await axios.post('signin', {
     username: userName,
   });
-  console.log(data);
   return data;
 };
 
 const getBooks = async (token) => {
-  console.log('books');
-
   const { data } = await axios.get('books', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   });
-  console.log(data);
-
   return data;
 };
 

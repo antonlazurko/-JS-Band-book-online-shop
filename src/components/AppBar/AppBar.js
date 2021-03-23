@@ -1,8 +1,7 @@
-import Navigation from '../Navigation/Navigation';
-
 const AppBar = () => (
   <div>
-    <Navigation />
+    <h1>JS Band Store</h1>
+    <div>Cart</div>
   </div>
 );
 export default AppBar;
