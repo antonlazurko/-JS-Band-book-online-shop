@@ -2,27 +2,37 @@ import { useSelector } from 'react-redux';
 import cartSelectors from '../../redux/cart/cart-selectors';
 import services from '../../services/services';
 import selectors from '../../redux/books/selectors';
+import cart from '../../images/cart.png';
+import styles from './Cart.module.css';
 
 const Cart = () => {
   const cartInfo = useSelector(cartSelectors.getCartInfo);
   const token = useSelector(selectors.getTokenSelector);
 
   return (
-    <>
-      {cartInfo.length !== 0 && (
+    <div className={styles.cart}>
+      <button
+        type="button"
+        className="btn btn-outline-secondary"
+        style={{ width: '100px' }}
+        disabled={cartInfo.length === 0}
+        onClick={() => {
+          services.purchase(
+            cartInfo.map((book) => book.bookId),
+            token,
+          );
+        }}
+      >
+        Purchase
+      </button>
+      {cartInfo.length === 0 ? (
         <div>
-          <button
-            type="button"
-            onClick={() => {
-              services.purchase(
-                cartInfo.map((book) => book.bookId),
-                token,
-              );
-            }}
-          >
-            Purchase
-          </button>
-          <table border="1">
+          <img src={cart} alt="cart" />
+          Cart empty
+        </div>
+      ) : (
+        <div>
+          <table bordered="true" className="table">
             <thead>
               <tr>
                 <th>Name</th>
@@ -42,12 +52,13 @@ const Cart = () => {
               ))}
             </tbody>
           </table>
-          <p>
-            {cartInfo.reduce((acc, book) => acc + book.count * book.price, 0)}
-          </p>
+          <div>
+            Total price:
+            {cartInfo.reduce((acc, book) => acc + book.count * book.price, 0)}$
+          </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 export default Cart;

@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import booksOperations from '../../redux/books/books-operations';
+import logo from '../../images/default-user.jpg';
+import styles from './LoginView.module.css';
 
 const LogInView = () => {
   const dispatch = useDispatch();
@@ -17,19 +19,21 @@ const LogInView = () => {
     }
   };
   return (
-    <div className="login">
-      <img />
-      <form onSubmit={onSubmit}>
-        <label>Name</label>
+    <div className={styles.login}>
+      <img src={logo} alt="default user" />
+      <h1>JS Band Store</h1>
+      <form style={{ width: 'auto' }} onSubmit={onSubmit}>
+        <label className="input-group">Name</label>
         <input
+          className="input-group"
           value={filterValue}
           type="text"
           autoComplete="off"
           autoFocus
           onChange={(e) => setFilterValue(e.target.value)}
         />
-        <button type="submit">
-          <span>Log in</span>
+        <button className="btn btn-secondary input-group" type="submit">
+          Log in
         </button>
       </form>
     </div>

@@ -3,10 +3,11 @@ import { lazy, Suspense } from 'react';
 import { useSelector } from 'react-redux';
 
 // eslint-disable-next-line import/no-unresolved
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AppBar from './components/AppBar/AppBar';
 import selectors from './redux/books/selectors';
+import Container from './components/Container/Container';
 import './App.css';
 
 // lazy import
@@ -20,7 +21,7 @@ function App() {
   const isLoggedIn = useSelector(selectors.getIsLoggedIn);
 
   return (
-    <>
+    <Container>
       {isLoggedIn && <AppBar />}
       <Suspense fallback={<div>Downloading...</div>}>
         <Switch>
@@ -41,7 +42,7 @@ function App() {
           </Route>
         </Switch>
       </Suspense>
-    </>
+    </Container>
   );
 }
 

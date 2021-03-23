@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import booksOperations from '../../redux/books/books-operations';
 import selectors from '../../redux/books/selectors';
 import cartActions from '../../redux/cart/cart-actions';
+import styles from './BookView.module.css';
 
 const BookView = () => {
   const dispatch = useDispatch();
@@ -24,15 +25,19 @@ const BookView = () => {
   }, []);
   const [booksCount, setBooksCount] = useState(1);
   return (
-    <>
-      <div className="bookDetails">
-        <img src={cover} width="200px" />
-        <p>{description}</p>
-        <h2>{title}</h2> <h3>{author}</h3>
-        <p>{level}</p>
+    <div className={styles.book}>
+      <div className={styles.bookField}>
+        <div className={styles.bookDescription}>
+          <img src={cover} width="200px" />
+          <p>{description}</p>
+        </div>
+        <div className={styles.title}>
+          <h5>{title}</h5> <h6>{author}</h6>
+          <p>{level}</p>
+        </div>
       </div>
-      <div className="cartField">
-        <p>Price, ${price}</p>
+      <div className={styles.cartField}>
+        <p>Price, $ {price}</p>
         <label
           htmlFor="bookCount"
           onChange={(e) => {
@@ -48,8 +53,9 @@ const BookView = () => {
             max={count}
           ></input>
         </label>
-        <p>Total Price, ${price * booksCount}</p>
+        <p>Total Price, $ {price * booksCount}</p>
         <button
+          className="btn btn-outline-secondary"
           type="button"
           onClick={() => {
             dispatch(
@@ -65,7 +71,7 @@ const BookView = () => {
           Add to cart
         </button>
       </div>
-    </>
+    </div>
   );
 };
 export default BookView;
