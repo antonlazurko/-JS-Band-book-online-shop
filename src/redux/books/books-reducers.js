@@ -13,6 +13,12 @@ const authInitialState = {
 };
 
 const authorization = createReducer(authInitialState, {
+  [booksActions.signOutAction]: () => ({
+    userName: authInitialState.username,
+    avatar: authInitialState.avatar,
+    token: authInitialState.token,
+    isLoggedIn: authInitialState.isLoggedIn,
+  }),
   [booksOperations.logIn.fulfilled]: (_, { payload }) => ({
     userName: payload.username,
     avatar: payload.avatar,
@@ -22,7 +28,7 @@ const authorization = createReducer(authInitialState, {
 });
 
 const books = createReducer([], {
-  [booksOperations.getBooks.fulfilled]: (_, { payload }) => [...payload],
+  [booksOperations.getBooks.fulfilled]: (_, { payload }) => payload,
 });
 
 const bookDetails = createReducer(

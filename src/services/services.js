@@ -29,7 +29,7 @@ const getBookById = async (id, token) => {
 
 const purchase = async (books, token) => {
   const { data } = await axios.post(
-    'books/purchase',
+    'purchase',
     {
       books: [...books],
     },

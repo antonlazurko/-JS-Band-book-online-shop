@@ -1,11 +1,27 @@
 import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-const AppBar = () => (
-  <div>
-    <h1>JS Band Store</h1>
+import booksActions from '../../redux/books/books-actions';
+import selectors from '../../redux/books/selectors';
+
+console.log(booksActions);
+const AppBar = () => {
+  const dispatch = useDispatch();
+  const userName = useSelector(selectors.getUserName);
+  return (
     <div>
-      <NavLink to="/cart">Cart</NavLink>
+      <h1>JS Band Store</h1>
+      <div>
+        <NavLink to="/cart">Cart</NavLink>
+      </div>
+      <p>{userName}</p>
+      <button
+        type="button"
+        onClick={() => dispatch(booksActions.signOutAction())}
+      >
+        Sign out
+      </button>
     </div>
-  </div>
-);
+  );
+};
 export default AppBar;
