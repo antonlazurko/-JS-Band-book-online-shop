@@ -1,8 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import { useSelector } from 'react-redux';
-import cartSelectors from '../../redux/cart/cart-selectors';
-import services from '../../services/services';
-import selectors from '../../redux/books/selectors';
-import cart from '../../images/cart.png';
+import { cartSelectors } from 'redux/cart';
+import services from 'services';
+import { selectors } from 'redux/books';
+import cart from 'images/cart.png';
 import styles from './Cart.module.css';
 
 const Cart = () => {

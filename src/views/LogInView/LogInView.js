@@ -1,22 +1,20 @@
+/* eslint-disable import/no-unresolved */
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import booksOperations from '../../redux/books/books-operations';
-import logo from '../../images/default-user.jpg';
+import { booksOperations } from 'redux/books';
+import logo from 'images/default-user.jpg';
 import styles from './LoginView.module.css';
 
 const LogInView = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
   const [loginName, setLoginName] = useState('');
   const onSubmit = async (e) => {
     e.preventDefault();
     if (loginName.length > 3 && loginName.length <= 16) {
       await dispatch(booksOperations.logIn(loginName));
       setLoginName('');
-      history.push('/catalog/');
       return true;
     }
     if (loginName.length < 4) {
