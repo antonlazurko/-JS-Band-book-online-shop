@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import booksOperations from '../../redux/books/books-operations';
 import logo from '../../images/default-user.jpg';
@@ -9,14 +10,25 @@ import styles from './LoginView.module.css';
 const LogInView = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [filterValue, setFilterValue] = useState('');
+  const [loginName, setLoginName] = useState('');
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (filterValue.length > 3 && filterValue.length <= 16) {
-      await dispatch(booksOperations.logIn(filterValue));
-      setFilterValue('');
+    if (loginName.length > 3 && loginName.length <= 16) {
+      await dispatch(booksOperations.logIn(loginName));
+      setLoginName('');
       history.push('/catalog/');
+      return true;
     }
+    if (loginName.length < 4) {
+      toast.error(`Name must be longer than ${loginName.length} characters!`, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      return false;
+    }
+    toast.error(`Name must be shorter than ${loginName.length} characters!`, {
+      position: toast.POSITION.TOP_CENTER,
+    });
+    return false;
   };
   return (
     <div className={styles.login}>
@@ -26,11 +38,11 @@ const LogInView = () => {
         <label className="input-group">Name</label>
         <input
           className="input-group"
-          value={filterValue}
+          value={loginName}
           type="text"
           autoComplete="off"
           autoFocus
-          onChange={(e) => setFilterValue(e.target.value)}
+          onChange={(e) => setLoginName(e.target.value)}
         />
         <button className="btn btn-secondary input-group" type="submit">
           Log in

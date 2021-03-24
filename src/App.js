@@ -1,9 +1,13 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { useSelector } from 'react-redux';
+import Loader from 'react-loader-spinner';
+import { ToastContainer } from 'react-toastify';
 
 // eslint-disable-next-line import/no-unresolved
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 import AppBar from './components/AppBar/AppBar';
 import selectors from './redux/books/selectors';
@@ -23,7 +27,11 @@ function App() {
   return (
     <Container>
       {isLoggedIn && <AppBar />}
-      <Suspense fallback={<div>Downloading...</div>}>
+      <Suspense
+        fallback={
+          <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+        }
+      >
         <Switch>
           <Route exact path="/catalog/">
             {isLoggedIn ? <CatalogView /> : <Redirect to="/login" />}
@@ -41,6 +49,7 @@ function App() {
             <NotFoundView />
           </Route>
         </Switch>
+        <ToastContainer autoClose={1800} />
       </Suspense>
     </Container>
   );
