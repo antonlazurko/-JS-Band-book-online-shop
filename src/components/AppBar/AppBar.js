@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { booksActions, selectors } from 'redux/books';
@@ -34,12 +34,14 @@ const AppBar = () => {
       <div>
         <hr />
         <div className={styles.header}>
-          <h2>JS Band Store</h2>
-          <NavLink to="/cart" style={{ color: 'black' }}>
+          <Link to="/catalog" style={{ color: 'black' }}>
+            <h2>JS Band Store</h2>
+          </Link>
+          <Link to="/cart" style={{ color: 'black' }}>
             <img src={cart} alt="cart" />
             Cart(
             {cartInfo.reduce((acc, book) => acc + book.count, 0)})
-          </NavLink>
+          </Link>
         </div>
       </div>
       <hr />

@@ -1,2 +1,6 @@
-const Container = ({ children }) => <div className="container">{children}</div>;
+const Container = ({ children }) => (
+  <div className="container" style={{ marginTop: '30px' }}>
+    {children}
+  </div>
+);
 export default Container;

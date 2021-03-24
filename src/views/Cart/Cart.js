@@ -1,6 +1,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable import/no-unresolved */
 import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
 
 import { cartSelectors, cartOperations } from 'redux/cart';
 import { CartModal } from 'components';
@@ -13,10 +14,13 @@ const Cart = () => {
   const cartInfo = useSelector(cartSelectors.getCartInfo);
   const cartModal = useSelector(cartSelectors.getCartModal);
   const token = useSelector(selectors.getTokenSelector);
-
+  const [modalCartInfo, setModalCartInfo] = useState([]);
+  useEffect(() => {
+    setModalCartInfo(cartInfo);
+  }, []);
   return (
     <div className={styles.cart}>
-      {cartModal && <CartModal />}
+      {cartModal && <CartModal cartInfo={modalCartInfo} />}
       <button
         type="button"
         className="btn btn-outline-secondary"
@@ -34,13 +38,15 @@ const Cart = () => {
         Purchase
       </button>
       {cartInfo.length === 0 ? (
-        <div>
-          <img src={cart} alt="cart" />
-          Cart empty
+        <div className={styles.empty}>
+          <p>
+            <img src={cart} alt="cart" />
+            Cart empty
+          </p>
         </div>
       ) : (
         <div>
-          <table bordered="true" className="table">
+          <table border="1px" className="table">
             <thead>
               <tr>
                 <th>Name</th>
