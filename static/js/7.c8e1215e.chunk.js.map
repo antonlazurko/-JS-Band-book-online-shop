@@ -1,1 +1,1 @@
-{"version":3,"sources":["views/NotFoundView/NotFoundView.js"],"names":["NotFoundView"],"mappings":"sMACeA,EADM,kBAAM","file":"static/js/7.c8e1215e.chunk.js","sourcesContent":["const NotFoundView = () => <p>Page not found</p>;\nexport default NotFoundView;\n"],"sourceRoot":""}
+{"version":3,"sources":["views/NotFoundView/NotFoundView.js"],"names":["NotFoundView"],"mappings":"sMACeA,EADM,kBAAM","file":"static/js/7.c8e1215e.chunk.js","sourcesContent":["const NotFoundView = () => <p>Page not found</p>;\r\nexport default NotFoundView;\r\n"],"sourceRoot":""}
