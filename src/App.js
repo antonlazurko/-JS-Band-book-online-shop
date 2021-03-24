@@ -33,17 +33,33 @@ function App() {
         }
       >
         <Switch>
-          <Route exact path="/catalog/">
-            {isLoggedIn ? <CatalogView /> : <Redirect to="/login" />}
+          <Route exact path="/js-band-book-online-shop/">
+            {isLoggedIn ? (
+              <CatalogView />
+            ) : (
+              <Redirect to="/js-band-book-online-shop/login" />
+            )}
           </Route>
-          <Route path="/catalog/:id">
-            {isLoggedIn ? <BookView /> : <Redirect to="/login" />}
+          <Route path="/js-band-book-online-shop/:id">
+            {isLoggedIn ? (
+              <BookView />
+            ) : (
+              <Redirect to="/js-band-book-online-shop/login" />
+            )}
           </Route>
-          <Route path="/cart">
-            {isLoggedIn ? <Cart /> : <Redirect to="/login" />}
+          <Route path="/js-band-book-online-shop/cart">
+            {isLoggedIn ? (
+              <Cart />
+            ) : (
+              <Redirect to="/js-band-book-online-shop/login" />
+            )}
           </Route>
-          <Route path="/login">
-            {!isLoggedIn ? <LogInView /> : <Redirect to="/catalog" />}
+          <Route path="/js-band-book-online-shop/login">
+            {!isLoggedIn ? (
+              <LogInView />
+            ) : (
+              <Redirect to="/js-band-book-online-shop/" />
+            )}
           </Route>
           <Route>
             <NotFoundView />

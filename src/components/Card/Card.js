@@ -11,7 +11,7 @@ const Card = ({ book }) => {
       <button
         className="btn btn-outline-secondary"
         onClick={() => {
-          history.push(`/catalog/${book.id}`);
+          history.push(`/js-band-book-online-shop/${book.id}`);
         }}
       >
         View

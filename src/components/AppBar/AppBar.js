@@ -34,10 +34,10 @@ const AppBar = () => {
       <div>
         <hr />
         <div className={styles.header}>
-          <Link to="/catalog" style={{ color: 'black' }}>
+          <Link to="/js-band-book-online-shop/" style={{ color: 'black' }}>
             <h2>JS Band Store</h2>
           </Link>
-          <Link to="/cart" style={{ color: 'black' }}>
+          <Link to="/js-band-book-online-shop/cart" style={{ color: 'black' }}>
             <img src={cart} alt="cart" />
             Cart(
             {cartInfo.reduce((acc, book) => acc + book.count, 0)})
