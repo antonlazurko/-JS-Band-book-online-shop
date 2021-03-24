@@ -1,2 +1,3 @@
-const getCartInfo = (state) => state.cart;
-export default { getCartInfo };
+const getCartInfo = (state) => state.cart.cart;
+const getCartModal = (state) => state.cart.cartModalReducer;
+export default { getCartInfo, getCartModal };

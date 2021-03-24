@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
 
 import booksOperations from './books-operations';
+import cartOperations from '../cart/cart-operations';
 import booksActions from './books-actions';
 import { cart } from '../cart';
 
@@ -52,6 +53,9 @@ const isLoading = createReducer(false, {
   [booksOperations.logIn.rejected]: () => false,
   [booksOperations.getBooks.rejected]: () => false,
   [booksOperations.getBookById.rejected]: () => false,
+  [cartOperations.purchaseOperation.rejected]: () => false,
+  [cartOperations.purchaseOperation.fulfilled]: () => false,
+  [cartOperations.purchaseOperation.pending]: () => true,
 });
 
 const error = createReducer(null, {
@@ -61,6 +65,8 @@ const error = createReducer(null, {
   [booksOperations.getBooks.pending]: () => null,
   [booksOperations.getBookById.rejected]: (_, { payload }) => payload,
   [booksOperations.getBookById.pending]: () => null,
+  [cartOperations.purchaseOperation.rejected]: (_, { payload }) => payload,
+  [cartOperations.purchaseOperation.pending]: () => null,
 });
 
 export default combineReducers({
