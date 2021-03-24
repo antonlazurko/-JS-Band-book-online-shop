@@ -35,12 +35,19 @@ function App() {
         <Switch>
           <Route exact path="/js-band-book-online-shop/">
             {isLoggedIn ? (
+              <Redirect to="/js-band-book-online-shop/catalog" />
+            ) : (
+              <Redirect to="/js-band-book-online-shop/login" />
+            )}
+          </Route>
+          <Route exact path="/js-band-book-online-shop/catalog">
+            {isLoggedIn ? (
               <CatalogView />
             ) : (
               <Redirect to="/js-band-book-online-shop/login" />
             )}
           </Route>
-          <Route path="/js-band-book-online-shop/:id">
+          <Route path="/js-band-book-online-shop/catalog/:id">
             {isLoggedIn ? (
               <BookView />
             ) : (
@@ -58,7 +65,7 @@ function App() {
             {!isLoggedIn ? (
               <LogInView />
             ) : (
-              <Redirect to="/js-band-book-online-shop/" />
+              <Redirect exact to="/js-band-book-online-shop/catalog" />
             )}
           </Route>
           <Route>

@@ -34,7 +34,11 @@ const AppBar = () => {
       <div>
         <hr />
         <div className={styles.header}>
-          <Link to="/js-band-book-online-shop/" style={{ color: 'black' }}>
+          <Link
+            exact
+            to="/js-band-book-online-shop/catalog"
+            style={{ color: 'black' }}
+          >
             <h2>JS Band Store</h2>
           </Link>
           <Link to="/js-band-book-online-shop/cart" style={{ color: 'black' }}>
