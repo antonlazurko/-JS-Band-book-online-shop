@@ -14,6 +14,7 @@
 .cartField{
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
     width: 40%;
     height: 100%;
     height: auto;

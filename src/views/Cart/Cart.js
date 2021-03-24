@@ -1,39 +1,52 @@
+/* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable import/no-unresolved */
-import { useSelector } from 'react-redux';
-import { cartSelectors } from 'redux/cart';
-import services from 'services';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+
+import { cartSelectors, cartOperations } from 'redux/cart';
+import { CartModal } from 'components';
 import { selectors } from 'redux/books';
 import cart from 'images/cart.png';
 import styles from './Cart.module.css';
 
 const Cart = () => {
+  const dispatch = useDispatch();
   const cartInfo = useSelector(cartSelectors.getCartInfo);
+  const cartModal = useSelector(cartSelectors.getCartModal);
   const token = useSelector(selectors.getTokenSelector);
-
+  const [modalCartInfo, setModalCartInfo] = useState([]);
+  useEffect(() => {
+    setModalCartInfo(cartInfo);
+  }, []);
   return (
     <div className={styles.cart}>
+      {cartModal && <CartModal cartInfo={modalCartInfo} />}
       <button
         type="button"
         className="btn btn-outline-secondary"
         style={{ width: '100px' }}
         disabled={cartInfo.length === 0}
-        onClick={() => {
-          services.purchase(
-            cartInfo.map((book) => book.bookId),
-            token,
-          );
-        }}
+        onClick={() =>
+          dispatch(
+            cartOperations.purchaseOperation({
+              books: cartInfo.map((book) => book.bookId),
+              token,
+            }),
+          )
+        }
       >
         Purchase
       </button>
       {cartInfo.length === 0 ? (
-        <div>
-          <img src={cart} alt="cart" />
-          Cart empty
+        <div className={styles.empty}>
+          <p>
+            <img src={cart} alt="cart" />
+            Cart empty
+          </p>
         </div>
       ) : (
         <div>
-          <table bordered="true" className="table">
+          <table border="1px" className="table">
             <thead>
               <tr>
                 <th>Name</th>
