@@ -1,6 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import booksServices from '../../services/services';
+// eslint-disable-next-line import/no-unresolved
+import booksServices from 'services';
 
 const logIn = createAsyncThunk(
   'auth/login',

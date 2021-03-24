@@ -3,7 +3,7 @@ import { createReducer } from '@reduxjs/toolkit';
 
 import booksOperations from './books-operations';
 import booksActions from './books-actions';
-import cart from '../cart/cart-reducers';
+import { cart } from '../cart';
 
 const authInitialState = {
   userName: '',

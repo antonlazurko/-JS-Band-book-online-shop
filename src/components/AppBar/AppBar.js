@@ -1,12 +1,12 @@
+/* eslint-disable import/no-unresolved */
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import booksActions from '../../redux/books/books-actions';
-import selectors from '../../redux/books/selectors';
-import cartSelectors from '../../redux/cart/cart-selectors';
+import { booksActions, selectors } from 'redux/books';
+import { cartSelectors } from 'redux/cart';
+import cart from 'images/cart.png';
 
 import styles from './AppBar.module.css';
-import cart from '../../images/cart.png';
 
 const AppBar = () => {
   const dispatch = useDispatch();

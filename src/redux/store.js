@@ -11,7 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import booksReducers from './books/books-reducers';
+import { booksReducers } from './books';
 
 const authPersistConfig = {
   key: 'auth',

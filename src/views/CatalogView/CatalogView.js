@@ -1,9 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import booksOperations from '../../redux/books/books-operations';
-import booksActions from '../../redux/books/books-actions';
-import selectors from '../../redux/books/selectors';
-import Card from '../../components/Card/Card';
+
+import { booksOperations, booksActions, selectors } from 'redux/books';
+import { Card } from 'components';
 import styles from './CatalogView.module.css';
 
 const CatalogView = () => {

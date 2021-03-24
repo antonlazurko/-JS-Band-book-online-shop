@@ -1,10 +1,11 @@
+/* eslint-disable import/no-unresolved */
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import booksOperations from '../../redux/books/books-operations';
-import selectors from '../../redux/books/selectors';
-import cartActions from '../../redux/cart/cart-actions';
+import { booksOperations, selectors } from 'redux/books';
+import { cartActions } from 'redux/cart';
+
 import styles from './BookView.module.css';
 
 const BookView = () => {
