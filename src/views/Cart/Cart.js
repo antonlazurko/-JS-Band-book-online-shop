@@ -1,7 +1,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable import/no-unresolved */
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { cartSelectors, cartOperations } from 'redux/cart';
 import { CartModal } from 'components';
@@ -66,7 +66,7 @@ const Cart = () => {
               ))}
             </tbody>
           </table>
-          <div>
+          <div className="totalPrice">
             Total price:
             {cartInfo.reduce((acc, book) => acc + book.count * book.price, 0)}$
           </div>

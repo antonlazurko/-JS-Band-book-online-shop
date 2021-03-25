@@ -10,8 +10,20 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { combineReducers } from 'redux';
 
 import { booksReducers } from './books';
+import { cartReducers } from './cart';
+
+const { cart, cartModalReducer } = cartReducers;
+const {
+  authorization,
+  books,
+  isLoading,
+  bookDetails,
+  error,
+  filter,
+} = booksReducers;
 
 const authPersistConfig = {
   key: 'auth',
@@ -27,7 +39,19 @@ const middleware = [
 ];
 
 const store = configureStore({
-  reducer: persistReducer(authPersistConfig, booksReducers),
+  reducer: persistReducer(
+    authPersistConfig,
+    combineReducers({
+      authorization,
+      books,
+      isLoading,
+      bookDetails,
+      error,
+      filter,
+      cart,
+      cartModalReducer,
+    }),
+  ),
   middleware,
   devTools: process.env.NODE_ENV === 'development',
 });

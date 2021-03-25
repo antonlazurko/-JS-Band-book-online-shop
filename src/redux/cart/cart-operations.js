@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // eslint-disable-next-line import/no-unresolved
-import services from 'services';
+import services from '../../services/services';
 
 const purchaseOperation = createAsyncThunk(
   'cart/purchase',
