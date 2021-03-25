@@ -1,11 +1,10 @@
 /* eslint-disable import/no-unresolved */
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { cartActions } from 'redux/cart';
 import styles from './CartModal.module.css';
 
 const CartModal = ({ cartInfo }) => {
-  console.log(cartInfo);
-
   const dispatch = useDispatch();
   return (
     <div className={styles.authModalBackdrop}>

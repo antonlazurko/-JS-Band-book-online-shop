@@ -1,4 +1,5 @@
 /* eslint-disable import/no-unresolved */
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -13,7 +14,7 @@ const AppBar = () => {
   const userName = useSelector(selectors.getUserName);
   const cartInfo = useSelector(cartSelectors.getCartInfo);
   return (
-    <div>
+    <div className="AppBar">
       <div className={styles.userMenu}>
         <p>
           Wellcome
@@ -35,7 +36,7 @@ const AppBar = () => {
         <hr />
         <div className={styles.header}>
           <Link
-            exact
+            exact="true"
             to="/js-band-book-online-shop/catalog"
             style={{ color: 'black' }}
           >

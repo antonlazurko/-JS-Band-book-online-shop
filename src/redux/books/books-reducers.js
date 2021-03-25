@@ -1,11 +1,11 @@
-import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
 
 import booksOperations from './books-operations';
 import cartOperations from '../cart/cart-operations';
 import booksActions from './books-actions';
-import { cart } from '../cart';
+import { cartReducers } from '../cart';
 
+const { cart, cartModalReducer } = cartReducers;
 const authInitialState = {
   userName: '',
   avatar: '',
@@ -69,7 +69,7 @@ const error = createReducer(null, {
   [cartOperations.purchaseOperation.pending]: () => null,
 });
 
-export default combineReducers({
+export default {
   authorization,
   books,
   isLoading,
@@ -77,4 +77,5 @@ export default combineReducers({
   error,
   filter,
   cart,
-});
+  cartModalReducer,
+};
