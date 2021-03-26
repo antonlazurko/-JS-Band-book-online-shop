@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/js-band-book-online-shop/static/css/main.822feebe.chunk.css",
-    "main.js": "/js-band-book-online-shop/static/js/main.e1291761.chunk.js",
-    "main.js.map": "/js-band-book-online-shop/static/js/main.e1291761.chunk.js.map",
+    "main.js": "/js-band-book-online-shop/static/js/main.cdc63991.chunk.js",
+    "main.js.map": "/js-band-book-online-shop/static/js/main.cdc63991.chunk.js.map",
     "runtime-main.js": "/js-band-book-online-shop/static/js/runtime-main.dda58877.js",
     "runtime-main.js.map": "/js-band-book-online-shop/static/js/runtime-main.dda58877.js.map",
     "static/css/2.c50c2e80.chunk.css": "/js-band-book-online-shop/static/css/2.c50c2e80.chunk.css",
@@ -36,6 +36,6 @@
     "static/css/2.c50c2e80.chunk.css",
     "static/js/2.2c41de00.chunk.js",
     "static/css/main.822feebe.chunk.css",
-    "static/js/main.e1291761.chunk.js"
+    "static/js/main.cdc63991.chunk.js"
   ]
 }
