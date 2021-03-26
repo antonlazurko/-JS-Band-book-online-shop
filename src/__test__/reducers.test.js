@@ -9,7 +9,7 @@ describe('books reducer', () => {
     expect(reducers.books([], {})).toEqual([]);
   });
 
-  test('should handle books/changeFilter', () => {
+  test('should handle changeFilter', () => {
     expect(
       reducers.filter('', {
         type: 'books/changeFilter',
@@ -17,21 +17,24 @@ describe('books reducer', () => {
       }),
     ).toEqual('string');
   });
-  const authInitialState = {
-    userName: 'string',
-    avatar: 'string',
-    token: 'string',
-    isLoggedIn: true,
-  };
-  expect(
-    reducers.authorization(authInitialState, {
-      type: 'books/signOut',
-    }),
-  ).toEqual({
-    userName: undefined,
-    avatar: '',
-    token: '',
-    isLoggedIn: false,
+  test('should handle signOut', () => {
+    const authInitialState = {
+      userName: 'string',
+      avatar: 'string',
+      token: 'string',
+      isLoggedIn: true,
+    };
+
+    expect(
+      reducers.authorization(authInitialState, {
+        type: 'books/signOut',
+      }),
+    ).toEqual({
+      userName: undefined,
+      avatar: '',
+      token: '',
+      isLoggedIn: false,
+    });
   });
 });
 describe('cart reducer', () => {

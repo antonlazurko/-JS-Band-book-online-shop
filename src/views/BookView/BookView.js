@@ -21,9 +21,13 @@ const BookView = () => {
     price,
     count,
   } = useSelector(selectors.getBook);
+
+  // getting current book from API
   useEffect(() => {
     dispatch(booksOperations.getBookById({ id, token }));
   }, []);
+
+  // setting cuerrent books count for cart
   const [booksCount, setBooksCount] = useState(1);
   return (
     <div className={styles.book}>
@@ -54,7 +58,7 @@ const BookView = () => {
             max={count}
           ></input>
         </label>
-        <p>Total Price, $ {price * booksCount}</p>
+        <p>Total Price, $ {(price * booksCount).toFixed(2)}</p>
         <button
           className="btn btn-outline-secondary"
           type="button"

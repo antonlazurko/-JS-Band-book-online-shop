@@ -10,6 +10,8 @@ import styles from './CatalogView.module.css';
 const CatalogView = () => {
   const dispatch = useDispatch();
   const token = useSelector(selectors.getTokenSelector);
+
+  // getting books collection from API
   useEffect(() => {
     dispatch(booksOperations.getBooks(token));
   }, []);
@@ -17,9 +19,13 @@ const CatalogView = () => {
   const [filterValue, setFilterValue] = useState('');
   const [selectValue, setSelectValue] = useState('');
   const [booksByPrice, setBooksByPrice] = useState(filtredBooks);
+
+  // getting filtred books by name
   useEffect(() => {
     dispatch(booksActions.changeFilter(filterValue));
   }, [filterValue]);
+
+  // getting filtred books by price
   useEffect(() => {
     switch (selectValue) {
       case '':

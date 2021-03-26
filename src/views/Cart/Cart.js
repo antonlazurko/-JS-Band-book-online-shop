@@ -14,7 +14,10 @@ const Cart = () => {
   const cartInfo = useSelector(cartSelectors.getCartInfo);
   const cartModal = useSelector(cartSelectors.getCartModal);
   const token = useSelector(selectors.getTokenSelector);
+
   const [modalCartInfo, setModalCartInfo] = useState([]);
+
+  // setting current curt info for purchase
   useEffect(() => {
     setModalCartInfo(cartInfo);
   }, []);

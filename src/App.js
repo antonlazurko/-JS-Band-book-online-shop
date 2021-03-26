@@ -22,6 +22,7 @@ const Cart = lazy(() => import('./views/Cart/Cart'));
 const NotFoundView = lazy(() => import('./views/NotFoundView'));
 
 function App() {
+  // getting current logging info
   const isLoggedIn = useSelector(selectors.getIsLoggedIn);
 
   return (

@@ -14,10 +14,62 @@ initialize {
             "attribs": Object {},
             "children": Array [
               Node {
+                "attribs": Object {
+                  "alt": "avatar",
+                  "width": "40px",
+                },
+                "children": Array [],
+                "name": "img",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": Node {
+                  "data": "Wellcome",
+                  "next": Node {
+                    "attribs": Object {
+                      "style": "color:blue;margin-right:15px;margin-left:7px",
+                    },
+                    "children": Array [
+                      Node {
+                        "data": "anton",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "span",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "style": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "style": undefined,
+                    },
+                  },
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "text",
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "alt": undefined,
+                  "width": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "alt": undefined,
+                  "width": undefined,
+                },
+              },
+              Node {
                 "data": "Wellcome",
                 "next": Node {
                   "attribs": Object {
-                    "style": "color:red;margin-right:15px;margin-left:7px",
+                    "style": "color:blue;margin-right:15px;margin-left:7px",
                   },
                   "children": Array [
                     Node {
@@ -42,12 +94,32 @@ initialize {
                   },
                 },
                 "parent": [Circular],
-                "prev": null,
+                "prev": Node {
+                  "attribs": Object {
+                    "alt": "avatar",
+                    "width": "40px",
+                  },
+                  "children": Array [],
+                  "name": "img",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "alt": undefined,
+                    "width": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "alt": undefined,
+                    "width": undefined,
+                  },
+                },
                 "type": "text",
               },
               Node {
                 "attribs": Object {
-                  "style": "color:red;margin-right:15px;margin-left:7px",
+                  "style": "color:blue;margin-right:15px;margin-left:7px",
                 },
                 "children": Array [
                   Node {
@@ -66,7 +138,27 @@ initialize {
                   "data": "Wellcome",
                   "next": [Circular],
                   "parent": [Circular],
-                  "prev": null,
+                  "prev": Node {
+                    "attribs": Object {
+                      "alt": "avatar",
+                      "width": "40px",
+                    },
+                    "children": Array [],
+                    "name": "img",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                  },
                   "type": "text",
                 },
                 "type": "tag",
@@ -137,10 +229,62 @@ initialize {
               "attribs": Object {},
               "children": Array [
                 Node {
+                  "attribs": Object {
+                    "alt": "avatar",
+                    "width": "40px",
+                  },
+                  "children": Array [],
+                  "name": "img",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": Node {
+                    "data": "Wellcome",
+                    "next": Node {
+                      "attribs": Object {
+                        "style": "color:blue;margin-right:15px;margin-left:7px",
+                      },
+                      "children": Array [
+                        Node {
+                          "data": "anton",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "style": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "style": undefined,
+                      },
+                    },
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "text",
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "alt": undefined,
+                    "width": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "alt": undefined,
+                    "width": undefined,
+                  },
+                },
+                Node {
                   "data": "Wellcome",
                   "next": Node {
                     "attribs": Object {
-                      "style": "color:red;margin-right:15px;margin-left:7px",
+                      "style": "color:blue;margin-right:15px;margin-left:7px",
                     },
                     "children": Array [
                       Node {
@@ -165,12 +309,32 @@ initialize {
                     },
                   },
                   "parent": [Circular],
-                  "prev": null,
+                  "prev": Node {
+                    "attribs": Object {
+                      "alt": "avatar",
+                      "width": "40px",
+                    },
+                    "children": Array [],
+                    "name": "img",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                  },
                   "type": "text",
                 },
                 Node {
                   "attribs": Object {
-                    "style": "color:red;margin-right:15px;margin-left:7px",
+                    "style": "color:blue;margin-right:15px;margin-left:7px",
                   },
                   "children": Array [
                     Node {
@@ -189,7 +353,27 @@ initialize {
                     "data": "Wellcome",
                     "next": [Circular],
                     "parent": [Circular],
-                    "prev": null,
+                    "prev": Node {
+                      "attribs": Object {
+                        "alt": "avatar",
+                        "width": "40px",
+                      },
+                      "children": Array [],
+                      "name": "img",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                    },
                     "type": "text",
                   },
                   "type": "tag",
@@ -1335,10 +1519,62 @@ initialize {
               "attribs": Object {},
               "children": Array [
                 Node {
+                  "attribs": Object {
+                    "alt": "avatar",
+                    "width": "40px",
+                  },
+                  "children": Array [],
+                  "name": "img",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": Node {
+                    "data": "Wellcome",
+                    "next": Node {
+                      "attribs": Object {
+                        "style": "color:blue;margin-right:15px;margin-left:7px",
+                      },
+                      "children": Array [
+                        Node {
+                          "data": "anton",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "style": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "style": undefined,
+                      },
+                    },
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "text",
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "alt": undefined,
+                    "width": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "alt": undefined,
+                    "width": undefined,
+                  },
+                },
+                Node {
                   "data": "Wellcome",
                   "next": Node {
                     "attribs": Object {
-                      "style": "color:red;margin-right:15px;margin-left:7px",
+                      "style": "color:blue;margin-right:15px;margin-left:7px",
                     },
                     "children": Array [
                       Node {
@@ -1363,12 +1599,32 @@ initialize {
                     },
                   },
                   "parent": [Circular],
-                  "prev": null,
+                  "prev": Node {
+                    "attribs": Object {
+                      "alt": "avatar",
+                      "width": "40px",
+                    },
+                    "children": Array [],
+                    "name": "img",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                  },
                   "type": "text",
                 },
                 Node {
                   "attribs": Object {
-                    "style": "color:red;margin-right:15px;margin-left:7px",
+                    "style": "color:blue;margin-right:15px;margin-left:7px",
                   },
                   "children": Array [
                     Node {
@@ -1387,7 +1643,27 @@ initialize {
                     "data": "Wellcome",
                     "next": [Circular],
                     "parent": [Circular],
-                    "prev": null,
+                    "prev": Node {
+                      "attribs": Object {
+                        "alt": "avatar",
+                        "width": "40px",
+                      },
+                      "children": Array [],
+                      "name": "img",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                    },
                     "type": "text",
                   },
                   "type": "tag",
@@ -1458,10 +1734,62 @@ initialize {
                 "attribs": Object {},
                 "children": Array [
                   Node {
+                    "attribs": Object {
+                      "alt": "avatar",
+                      "width": "40px",
+                    },
+                    "children": Array [],
+                    "name": "img",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": Node {
+                      "data": "Wellcome",
+                      "next": Node {
+                        "attribs": Object {
+                          "style": "color:blue;margin-right:15px;margin-left:7px",
+                        },
+                        "children": Array [
+                          Node {
+                            "data": "anton",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "style": undefined,
+                        },
+                      },
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "text",
+                    },
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                  },
+                  Node {
                     "data": "Wellcome",
                     "next": Node {
                       "attribs": Object {
-                        "style": "color:red;margin-right:15px;margin-left:7px",
+                        "style": "color:blue;margin-right:15px;margin-left:7px",
                       },
                       "children": Array [
                         Node {
@@ -1486,12 +1814,32 @@ initialize {
                       },
                     },
                     "parent": [Circular],
-                    "prev": null,
+                    "prev": Node {
+                      "attribs": Object {
+                        "alt": "avatar",
+                        "width": "40px",
+                      },
+                      "children": Array [],
+                      "name": "img",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                    },
                     "type": "text",
                   },
                   Node {
                     "attribs": Object {
-                      "style": "color:red;margin-right:15px;margin-left:7px",
+                      "style": "color:blue;margin-right:15px;margin-left:7px",
                     },
                     "children": Array [
                       Node {
@@ -1510,7 +1858,27 @@ initialize {
                       "data": "Wellcome",
                       "next": [Circular],
                       "parent": [Circular],
-                      "prev": null,
+                      "prev": Node {
+                        "attribs": Object {
+                          "alt": "avatar",
+                          "width": "40px",
+                        },
+                        "children": Array [],
+                        "name": "img",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "alt": undefined,
+                          "width": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "alt": undefined,
+                          "width": undefined,
+                        },
+                      },
                       "type": "text",
                     },
                     "type": "tag",
@@ -2105,10 +2473,62 @@ initialize {
                 "attribs": Object {},
                 "children": Array [
                   Node {
+                    "attribs": Object {
+                      "alt": "avatar",
+                      "width": "40px",
+                    },
+                    "children": Array [],
+                    "name": "img",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": Node {
+                      "data": "Wellcome",
+                      "next": Node {
+                        "attribs": Object {
+                          "style": "color:blue;margin-right:15px;margin-left:7px",
+                        },
+                        "children": Array [
+                          Node {
+                            "data": "anton",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "style": undefined,
+                        },
+                      },
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "text",
+                    },
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "alt": undefined,
+                      "width": undefined,
+                    },
+                  },
+                  Node {
                     "data": "Wellcome",
                     "next": Node {
                       "attribs": Object {
-                        "style": "color:red;margin-right:15px;margin-left:7px",
+                        "style": "color:blue;margin-right:15px;margin-left:7px",
                       },
                       "children": Array [
                         Node {
@@ -2133,12 +2553,32 @@ initialize {
                       },
                     },
                     "parent": [Circular],
-                    "prev": null,
+                    "prev": Node {
+                      "attribs": Object {
+                        "alt": "avatar",
+                        "width": "40px",
+                      },
+                      "children": Array [],
+                      "name": "img",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                    },
                     "type": "text",
                   },
                   Node {
                     "attribs": Object {
-                      "style": "color:red;margin-right:15px;margin-left:7px",
+                      "style": "color:blue;margin-right:15px;margin-left:7px",
                     },
                     "children": Array [
                       Node {
@@ -2157,7 +2597,27 @@ initialize {
                       "data": "Wellcome",
                       "next": [Circular],
                       "parent": [Circular],
-                      "prev": null,
+                      "prev": Node {
+                        "attribs": Object {
+                          "alt": "avatar",
+                          "width": "40px",
+                        },
+                        "children": Array [],
+                        "name": "img",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "alt": undefined,
+                          "width": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "alt": undefined,
+                          "width": undefined,
+                        },
+                      },
                       "type": "text",
                     },
                     "type": "tag",
@@ -2228,10 +2688,62 @@ initialize {
                   "attribs": Object {},
                   "children": Array [
                     Node {
+                      "attribs": Object {
+                        "alt": "avatar",
+                        "width": "40px",
+                      },
+                      "children": Array [],
+                      "name": "img",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": Node {
+                        "data": "Wellcome",
+                        "next": Node {
+                          "attribs": Object {
+                            "style": "color:blue;margin-right:15px;margin-left:7px",
+                          },
+                          "children": Array [
+                            Node {
+                              "data": "anton",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "style": undefined,
+                          },
+                        },
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "text",
+                      },
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "alt": undefined,
+                        "width": undefined,
+                      },
+                    },
+                    Node {
                       "data": "Wellcome",
                       "next": Node {
                         "attribs": Object {
-                          "style": "color:red;margin-right:15px;margin-left:7px",
+                          "style": "color:blue;margin-right:15px;margin-left:7px",
                         },
                         "children": Array [
                           Node {
@@ -2256,12 +2768,32 @@ initialize {
                         },
                       },
                       "parent": [Circular],
-                      "prev": null,
+                      "prev": Node {
+                        "attribs": Object {
+                          "alt": "avatar",
+                          "width": "40px",
+                        },
+                        "children": Array [],
+                        "name": "img",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "alt": undefined,
+                          "width": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "alt": undefined,
+                          "width": undefined,
+                        },
+                      },
                       "type": "text",
                     },
                     Node {
                       "attribs": Object {
-                        "style": "color:red;margin-right:15px;margin-left:7px",
+                        "style": "color:blue;margin-right:15px;margin-left:7px",
                       },
                       "children": Array [
                         Node {
@@ -2280,7 +2812,27 @@ initialize {
                         "data": "Wellcome",
                         "next": [Circular],
                         "parent": [Circular],
-                        "prev": null,
+                        "prev": Node {
+                          "attribs": Object {
+                            "alt": "avatar",
+                            "width": "40px",
+                          },
+                          "children": Array [],
+                          "name": "img",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "alt": undefined,
+                            "width": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "alt": undefined,
+                            "width": undefined,
+                          },
+                        },
                         "type": "text",
                       },
                       "type": "tag",
