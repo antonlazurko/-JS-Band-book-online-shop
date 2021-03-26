@@ -5,6 +5,7 @@
 .booksList{
 display: flex;
 flex-direction: row;
+justify-content: space-between;
 flex-wrap:  wrap;
 list-style: none;
 margin-top: 30px;
