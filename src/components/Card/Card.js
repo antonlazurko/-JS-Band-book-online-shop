@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Link, useHistory } from 'react-router-dom';
-// import { useRouteMatch } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+// import { Link, useRouteMatch } from 'react-router-dom';
 
 import styles from './Card.module.css';
 
@@ -22,7 +22,7 @@ const Card = ({ book }) => {
       <button
         className="btn btn-outline-secondary"
         onClick={() => {
-          history.push(`/catalog/${book.id}`);
+          history.push(`/js-band-book-online-shop/catalog/${book.id}`);
         }}
       >
         View
