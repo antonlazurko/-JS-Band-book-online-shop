@@ -2,21 +2,55 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;}
-.bookField{
-    display: flex;
-    flex-direction: row;
+.bookField {
+  display: flex;
+  width: 60%;
+
+  flex-direction: row;
 }
-.bookDescription{
-    width: 40%;}
-.title{
-    width: 20%;
+.bookDescription {
 }
-.cartField{
-    display: flex;
+.title {
+  /* width: 20%; */
+}
+.cartField {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  width: 30%;
+  height: 50%;
+  border: 1px solid black;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .book {
     flex-direction: column;
-    padding-top: 30px;
-    width: 40%;
-    height: 100%;
-    height: auto;
-    border: 1px solid black;
+        justify-content: center;
+        align-content: flex-start;
+  }
+  .bookField {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}.bookDescription {
+    display: flex;
+justify-content: center;
+flex-direction: column;
+
+  width: 100%;
 }
+.title {
+  width: 100%;
+}
+.cartField {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+}
+
+}
+

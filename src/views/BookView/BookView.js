@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { booksOperations, selectors } from 'redux/books';
 import { cartActions } from 'redux/cart';
 
+import defaultBook from 'images/default-book.png';
 import styles from './BookView.module.css';
 
 const BookView = () => {
@@ -33,7 +34,7 @@ const BookView = () => {
     <div className={styles.book}>
       <div className={styles.bookField}>
         <div className={styles.bookDescription}>
-          <img src={cover} width="200px" />
+          <img src={cover ?? defaultBook} width="200px" />
           <p>{description}</p>
         </div>
         <div className={styles.title}>
