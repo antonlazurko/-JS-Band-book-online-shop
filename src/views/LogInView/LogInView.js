@@ -10,6 +10,8 @@ import styles from './LoginView.module.css';
 const LogInView = () => {
   const dispatch = useDispatch();
   const [loginName, setLoginName] = useState('');
+
+  // submit user's name and logining to system with validation
   const onSubmit = async (e) => {
     e.preventDefault();
     if (loginName.length > 3 && loginName.length <= 16) {
@@ -28,6 +30,7 @@ const LogInView = () => {
     });
     return false;
   };
+
   return (
     <div className={styles.login}>
       <img src={logo} alt="default user" />

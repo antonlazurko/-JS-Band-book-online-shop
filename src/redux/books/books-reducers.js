@@ -2,6 +2,8 @@ import { createReducer } from '@reduxjs/toolkit';
 
 import booksOperations from './books-operations';
 import cartOperations from '../cart/cart-operations';
+import cartActions from '../cart/cart-actions';
+
 import booksActions from './books-actions';
 import { cartReducers } from '../cart';
 
@@ -36,6 +38,10 @@ const bookDetails = createReducer(
   {},
   {
     [booksOperations.getBookById.fulfilled]: (_, { payload }) => payload,
+    [cartActions.addToCart]: (state, { payload }) => ({
+      ...state,
+      count: payload.count,
+    }),
   },
 );
 

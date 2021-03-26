@@ -45,7 +45,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "jest",
-    "eject": "react-scripts eject",
     "test:coverage": "jest --coverage"
   },
   "eslintConfig": {

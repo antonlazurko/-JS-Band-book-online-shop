@@ -3,8 +3,7 @@ import { createSelector } from 'reselect';
 const getIsLoggedIn = (state) => state.authorization.isLoggedIn;
 const getBook = (state) => state.bookDetails;
 const getTokenSelector = (state) => state.authorization.token;
-const getUserName = (state) => state.authorization.userName;
-
+const getUserInfo = (state) => state.authorization;
 const getBooksSelector = (state) => state.books;
 const getFilter = (state) => state.filter;
 
@@ -27,5 +26,5 @@ export default {
   getFilter,
   getIsLoggedIn,
   getBook,
-  getUserName,
+  getUserInfo,
 };

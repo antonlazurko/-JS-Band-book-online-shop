@@ -1,5 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { useDispatch } from 'react-redux';
 import { cartActions } from 'redux/cart';
 import styles from './CartModal.module.css';
@@ -63,5 +65,7 @@ const CartModal = ({ cartInfo }) => {
     </div>
   );
 };
-
+CartModal.propTypes = {
+  cartInfo: PropTypes.object,
+};
 export default CartModal;

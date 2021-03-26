@@ -1,5 +1,4 @@
 import { createReducer } from '@reduxjs/toolkit';
-// import { combineReducers } from 'redux';
 
 import cartActions from './cart-actions';
 import cartOperations from './cart-operations';
@@ -19,5 +18,4 @@ const cartModalReducer = createReducer(false, {
   [cartOperations.purchaseOperation.fulfilled]: () => true,
   [cartActions.cartModalClose]: () => false,
 });
-// export default combineReducers({ cart, cartModalReducer });
 export default { cart, cartModalReducer };

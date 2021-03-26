@@ -11,15 +11,19 @@ import styles from './AppBar.module.css';
 
 const AppBar = () => {
   const dispatch = useDispatch();
-  const userName = useSelector(selectors.getUserName);
+
+  // initialize user and cart info
+  const { userName, avatar } = useSelector(selectors.getUserInfo);
   const cartInfo = useSelector(cartSelectors.getCartInfo);
+
   return (
     <div className="AppBar">
       <div className={styles.userMenu}>
         <p>
+          <img src={avatar} alt="avatar" width="40px" />
           Wellcome
           <span
-            style={{ color: 'red', marginRight: '15px', marginLeft: '7px' }}
+            style={{ color: 'blue', marginRight: '15px', marginLeft: '7px' }}
           >
             {userName}
           </span>

@@ -45,7 +45,6 @@ describe('Contaier', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Container />, div);
   });
-
   test('should render Contaier component', () => {
     const component = shallow(<Container />);
     const wrapper = component.find('.container');
