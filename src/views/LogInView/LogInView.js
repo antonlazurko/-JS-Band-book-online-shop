@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-unresolved */ /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
@@ -12,7 +12,7 @@ const LogInView = () => {
   const [loginName, setLoginName] = useState('');
 
   // submit user's name and logining to system with validation
-  const onSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (loginName.length > 3 && loginName.length <= 16) {
       await dispatch(booksOperations.logIn(loginName));
@@ -20,12 +20,12 @@ const LogInView = () => {
       return true;
     }
     if (loginName.length < 4) {
-      toast.error(`Name must be longer than ${loginName.length} characters!`, {
+      toast.error('Name must be longer than 3 characters!', {
         position: toast.POSITION.TOP_CENTER,
       });
       return false;
     }
-    toast.error(`Name must be shorter than ${loginName.length} characters!`, {
+    toast.error('Name must be shorter than 17 characters!', {
       position: toast.POSITION.TOP_CENTER,
     });
     return false;
@@ -35,7 +35,7 @@ const LogInView = () => {
     <div className={styles.login}>
       <img src={logo} alt="default user" />
       <h1>JS Band Store</h1>
-      <form style={{ width: 'auto' }} onSubmit={onSubmit}>
+      <form style={{ width: 'auto' }} onSubmit={handleSubmit}>
         <label className="input-group">Name</label>
         <input
           className="input-group"

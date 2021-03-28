@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { useSelector } from 'react-redux';

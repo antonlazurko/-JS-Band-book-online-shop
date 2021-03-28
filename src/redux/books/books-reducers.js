@@ -40,7 +40,7 @@ const bookDetails = createReducer(
     [booksOperations.getBookById.fulfilled]: (_, { payload }) => payload,
     [cartActions.addToCart]: (state, { payload }) => ({
       ...state,
-      count: payload.count,
+      count: state.count - payload.count,
     }),
   },
 );

@@ -1,7 +1,9 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-unresolved */ /* eslint-disable no-unused-vars */
+
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { booksOperations, selectors } from 'redux/books';
 import { cartActions } from 'redux/cart';
@@ -29,7 +31,31 @@ const BookView = () => {
   }, []);
 
   // setting cuerrent books count for cart
-  const [booksCount, setBooksCount] = useState(1);
+  const [booksCount, setBooksCount] = useState(0);
+
+  const handleAddToCartBtn = () => {
+    console.log(booksCount);
+    if (!booksCount) {
+      toast.info('Select the required books quantity', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      return;
+    }
+    if (booksCount > count) {
+      toast.info(`Sorry we have only ${count} books`, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      return;
+    }
+    dispatch(
+      cartActions.addToCart({
+        bookId: id,
+        title,
+        price,
+        count: booksCount,
+      }),
+    );
+  };
   return (
     <div className={styles.book}>
       <div className={styles.bookField}>
@@ -52,27 +78,21 @@ const BookView = () => {
         >
           Count
           <input
+            step="1"
             type="number"
             id="bookCount"
             name="bookCount"
-            min="1"
+            min="0"
             max={count}
           ></input>
         </label>
         <p>Total Price, $ {(price * booksCount).toFixed(2)}</p>
+        {count === 0 && <p>Not enough books</p>}
         <button
           className="btn btn-outline-secondary"
           type="button"
-          onClick={() => {
-            dispatch(
-              cartActions.addToCart({
-                bookId: id,
-                title,
-                price,
-                count: booksCount,
-              }),
-            );
-          }}
+          disabled={count === 0}
+          onClick={() => handleAddToCartBtn()}
         >
           Add to cart
         </button>
