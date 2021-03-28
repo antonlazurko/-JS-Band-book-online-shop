@@ -27,13 +27,18 @@ System place order, show a modal window with ordered items and successful messag
 
 When user authorized at the top of app show bar with name of current user and "Sign out" button. User can unlogged clicking button "Sign out" then  system redirects the user to the "Login" screen.
 
-## "Installation"
+## "Installation and run application"
 
 - Clone the reprository: https://github.com/antonlazurko/js-band-book-online-shop
 
 - npm install
 
 - npm run start
+
+- npm run test (testing app)
+
+- npm run test:coverege (app testing coverege)
+
 
 ## "Using technologies"
 
