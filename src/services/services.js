@@ -18,8 +18,8 @@ const getBooks = async (token) => {
   return data;
 };
 
-const getBookById = async (id, token) => {
-  const { data } = await axios.get(`books/${id}`, {
+const getBookById = async (bookId, token) => {
+  const { data } = await axios.get(`books/${bookId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

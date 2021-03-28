@@ -72,7 +72,10 @@ const Cart = () => {
           </table>
           <div className="totalPrice">
             Total price:
-            {cartInfo.reduce((acc, book) => acc + book.count * book.price, 0)}$
+            {cartInfo
+              .reduce((acc, book) => acc + book.count * book.price, 0)
+              .toFixed(2)}
+            $
           </div>
         </div>
       )}

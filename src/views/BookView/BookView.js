@@ -5,15 +5,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import { booksOperations, selectors } from 'redux/books';
-import { cartActions } from 'redux/cart';
+import { booksOperations, selectors, booksActions } from 'redux/books';
+import { cartActions, cartSelectors } from 'redux/cart';
 
 import defaultBook from 'images/default-book.png';
 import styles from './BookView.module.css';
 
 const BookView = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
+  const { bookId } = useParams();
   const token = useSelector(selectors.getTokenSelector);
   const {
     cover,
@@ -24,10 +24,15 @@ const BookView = () => {
     price,
     count,
   } = useSelector(selectors.getBook);
+  const cartInfo = useSelector(cartSelectors.getCartInfo);
 
   // getting current book from API
-  useEffect(() => {
-    dispatch(booksOperations.getBookById({ id, token }));
+  useEffect(async () => {
+    await dispatch(booksOperations.getBookById({ bookId, token }));
+    const isBookInCart = cartInfo.find((book) => book.bookId === bookId);
+    if (isBookInCart) {
+      dispatch(booksActions.bookRefreshAction(isBookInCart.count));
+    }
   }, []);
 
   // setting cuerrent books count for cart
@@ -49,7 +54,7 @@ const BookView = () => {
     }
     dispatch(
       cartActions.addToCart({
-        bookId: id,
+        bookId,
         title,
         price,
         count: booksCount,

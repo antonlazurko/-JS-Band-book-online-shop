@@ -49,7 +49,7 @@ function App() {
               <Redirect to="/js-band-book-online-shop/login" />
             )}
           </Route>
-          <Route path="/js-band-book-online-shop/catalog/:id">
+          <Route path="/js-band-book-online-shop/catalog/:bookId">
             {isLoggedIn ? (
               <BookView />
             ) : (
