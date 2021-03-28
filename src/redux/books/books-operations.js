@@ -27,9 +27,9 @@ const getBooks = createAsyncThunk(
 
 const getBookById = createAsyncThunk(
   'books/getBookById',
-  async ({ id, token }, { rejectWithValue }) => {
+  async ({ bookId, token }, { rejectWithValue }) => {
     try {
-      return await booksServices.getBookById(id, token);
+      return await booksServices.getBookById(bookId, token);
     } catch {
       return rejectWithValue();
     }

@@ -129,7 +129,7 @@ describe('Cart', () => {
       </Provider>,
     );
     const wrapper = component.find('.totalPrice');
-    expect(wrapper.text()).toBe('Total price:28$');
+    expect(wrapper.text()).toBe('Total price:28.00$');
   });
 });
 describe('LoginView', () => {

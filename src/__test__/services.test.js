@@ -28,27 +28,33 @@ const booksArray = [
 ];
 
 jest.mock('axios');
-mockAxios.post.mockImplementation(() =>
-  Promise.resolve({
-    data: {
-      username: 'Name',
-      avatar: 'String',
-      token: 'String',
-    },
-  }),
-);
-mockAxios.get.mockImplementation(() =>
-  Promise.resolve({
-    data: {
-      books: booksArray,
-    },
-  }),
-);
-test('data name should be "name"', async () => {
-  const data = await services.userLogin('Name');
-  expect(data.username).toBe('Name');
+
+describe('Getting books', () => {
+  mockAxios.get.mockImplementation(() =>
+    Promise.resolve({
+      data: {
+        books: booksArray,
+      },
+    }),
+  );
+  test('data should be object with property "books" which contains array "booksArray"', async () => {
+    const data = await services.getBooks('string');
+    expect(data.books).toStrictEqual(booksArray);
+  });
 });
-test('data should be object with property "books" which contains array "booksArray"', async () => {
-  const data = await services.getBooks('string');
-  expect(data.books).toStrictEqual(booksArray);
+
+describe('Purchase test', () => {
+  const successData = {
+    statusCode: 200,
+    data: { message: 'Thank you for purchasing books in our store!' },
+  };
+  mockAxios.post.mockImplementation(() =>
+    Promise.resolve({
+      data: successData,
+    }),
+  );
+  test('data should be object equal "successData"', async () => {
+    const data = await services.purchase(booksArray, 'string');
+    expect(data).toStrictEqual(successData);
+  });
 });
