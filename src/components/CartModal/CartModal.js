@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-unresolved */ /* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -66,6 +66,6 @@ const CartModal = ({ cartInfo }) => {
   );
 };
 CartModal.propTypes = {
-  cartInfo: PropTypes.object,
+  cartInfo: PropTypes.arrayOf(PropTypes.object),
 };
 export default CartModal;

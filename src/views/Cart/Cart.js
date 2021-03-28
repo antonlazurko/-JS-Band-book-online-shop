@@ -1,4 +1,5 @@
 /* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect, useState } from 'react';
