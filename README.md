@@ -1,6 +1,8 @@
 # JS Band Store.
 
 This application is online book shop.
+
+[Link to app Homepage](https://antonlazurko.github.io/js-band-book-online-shop "JS Band Book online shop")
  
 ## Description
 
