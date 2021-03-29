@@ -2,7 +2,9 @@
 
 This application is online book shop.
 
-[Link to app Homepage](https://antonlazurko.github.io/js-band-book-online-shop "JS Band Book online shop")
+[Link to app Homepage on GitHub Pages](https://antonlazurko.github.io/js-band-book-online-shop "JS Band Book online shop")
+
+[Link to app Homepage on Netlify](https://jsband-book-store.netlify.app/ "JS Band Book online shop")
  
 ## Description
 
