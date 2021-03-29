@@ -11,6 +11,8 @@ import { cartActions, cartSelectors } from 'redux/cart';
 import defaultBook from 'images/default-book.png';
 import styles from './BookView.module.css';
 
+const toastPosition = toast.POSITION.TOP_CENTER;
+
 const BookView = () => {
   const dispatch = useDispatch();
   const { bookId } = useParams();
@@ -39,16 +41,15 @@ const BookView = () => {
   const [booksCount, setBooksCount] = useState(0);
 
   const handleAddToCartBtn = () => {
-    console.log(booksCount);
     if (!booksCount) {
       toast.info('Select the required books quantity', {
-        position: toast.POSITION.TOP_CENTER,
+        position: toastPosition,
       });
       return;
     }
     if (booksCount > count) {
       toast.info(`Sorry we have only ${count} books`, {
-        position: toast.POSITION.TOP_CENTER,
+        position: toastPosition,
       });
       return;
     }
@@ -61,6 +62,7 @@ const BookView = () => {
       }),
     );
   };
+  const totalPrice = (price * booksCount).toFixed(2);
   return (
     <div className={styles.book}>
       <div className={styles.bookField}>
@@ -91,12 +93,12 @@ const BookView = () => {
             max={count}
           ></input>
         </label>
-        <p>Total Price, $ {(price * booksCount).toFixed(2)}</p>
-        {count === 0 && <p>Not enough books</p>}
+        <p>Total Price, $ {totalPrice}</p>
+        {!count && <p>Not enough books</p>}
         <button
           className="btn btn-outline-secondary"
           type="button"
-          disabled={count === 0}
+          disabled={!count}
           onClick={() => handleAddToCartBtn()}
         >
           Add to cart

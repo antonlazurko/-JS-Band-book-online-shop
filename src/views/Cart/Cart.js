@@ -22,6 +22,11 @@ const Cart = () => {
   useEffect(() => {
     setModalCartInfo(cartInfo);
   }, []);
+  const totalPrice = cartInfo
+    .reduce((acc, book) => acc + book.count * book.price, 0)
+    .toFixed(2);
+  const cartLength = cartInfo.length;
+
   return (
     <div className={styles.cart}>
       {cartModal && <CartModal cartInfo={modalCartInfo} />}
@@ -29,7 +34,7 @@ const Cart = () => {
         type="button"
         className="btn btn-outline-secondary"
         style={{ width: '100px' }}
-        disabled={cartInfo.length === 0}
+        disabled={!cartLength}
         onClick={() =>
           dispatch(
             cartOperations.purchaseOperation({
@@ -41,7 +46,7 @@ const Cart = () => {
       >
         Purchase
       </button>
-      {cartInfo.length === 0 ? (
+      {!cartLength ? (
         <div className={styles.empty}>
           <p>
             <img src={cart} alt="cart" />
@@ -72,10 +77,7 @@ const Cart = () => {
           </table>
           <div className="totalPrice">
             Total price:
-            {cartInfo
-              .reduce((acc, book) => acc + book.count * book.price, 0)
-              .toFixed(2)}
-            $
+            {totalPrice}$
           </div>
         </div>
       )}

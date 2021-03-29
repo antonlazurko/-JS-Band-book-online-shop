@@ -15,7 +15,7 @@ const AppBar = () => {
   // initialize user and cart info
   const { userName, avatar } = useSelector(selectors.getUserInfo);
   const cartInfo = useSelector(cartSelectors.getCartInfo);
-
+  const cartCount = cartInfo.reduce((acc, book) => acc + book.count, 0);
   return (
     <div className="AppBar">
       <div className={styles.userMenu}>
@@ -49,7 +49,7 @@ const AppBar = () => {
           <Link to="/js-band-book-online-shop/cart" style={{ color: 'black' }}>
             <img src={cart} alt="cart" />
             Cart(
-            {cartInfo.reduce((acc, book) => acc + book.count, 0)})
+            {cartCount})
           </Link>
         </div>
       </div>

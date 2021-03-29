@@ -7,28 +7,30 @@ import { booksOperations } from 'redux/books';
 import logo from 'images/default-user.jpg';
 import styles from './LoginView.module.css';
 
+const toastPosition = toast.POSITION.TOP_CENTER;
+
 const LogInView = () => {
   const dispatch = useDispatch();
   const [loginName, setLoginName] = useState('');
+  const loginNameLength = loginName.length;
 
   // submit user's name and logining to system with validation
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (loginName.length > 3 && loginName.length <= 16) {
-      await dispatch(booksOperations.logIn(loginName));
-      setLoginName('');
-      return true;
-    }
-    if (loginName.length < 4) {
+    if (loginNameLength < 4) {
       toast.error('Name must be longer than 3 characters!', {
-        position: toast.POSITION.TOP_CENTER,
+        position: toastPosition,
       });
-      return false;
+      return;
     }
-    toast.error('Name must be shorter than 17 characters!', {
-      position: toast.POSITION.TOP_CENTER,
-    });
-    return false;
+    if (loginNameLength > 16) {
+      toast.error('Name must be shorter than 17 characters!', {
+        position: toastPosition,
+      });
+      return;
+    }
+    await dispatch(booksOperations.logIn(loginName));
+    setLoginName('');
   };
 
   return (

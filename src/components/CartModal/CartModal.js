@@ -8,6 +8,9 @@ import styles from './CartModal.module.css';
 
 const CartModal = ({ cartInfo }) => {
   const dispatch = useDispatch();
+  const totalPrice = cartInfo
+    .reduce((acc, book) => acc + book.count * book.price, 0)
+    .toFixed(2);
   return (
     <div className={styles.authModalBackdrop}>
       <div className={styles.authModal}>
@@ -33,18 +36,14 @@ const CartModal = ({ cartInfo }) => {
                         <td>{book.title}</td>
                         <td>{book.count}</td>
                         <td>{book.price}</td>
-                        <td>{book.price * book.count}</td>
+                        <td>{(book.price * book.count).toFixed(2)}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
                 <div>
                   Total price:
-                  {cartInfo.reduce(
-                    (acc, book) => acc + book.count * book.price,
-                    0,
-                  )}
-                  $
+                  {totalPrice}$
                 </div>
               </div>
             </div>

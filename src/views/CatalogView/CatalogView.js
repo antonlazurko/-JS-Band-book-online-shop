@@ -7,6 +7,12 @@ import { booksOperations, booksActions, selectors } from 'redux/books';
 import { Card } from 'components';
 import styles from './CatalogView.module.css';
 
+const priceSelectOptions = [
+  { value: '0', priceOption: '0 < price < 25' },
+  { value: '1', priceOption: '25 < price < 50' },
+  { value: '2', priceOption: '50 >' },
+];
+
 const CatalogView = () => {
   const dispatch = useDispatch();
   const token = useSelector(selectors.getTokenSelector);
@@ -72,9 +78,9 @@ const CatalogView = () => {
             >
               <select name="price">
                 <option defaultValue="">Price</option>
-                <option value="0">0 &lt; price &lt; 25</option>
-                <option value="1">25 &lt; price &lt; 50</option>
-                <option value="2">50 &gt;</option>
+                {priceSelectOptions.map((option) => (
+                  <option value={option.value}>{option.priceOption}</option>
+                ))}
               </select>
             </form>
           </div>
