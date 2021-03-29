@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/js-band-book-online-shop/static/css/main.d8fe2c0e.chunk.css",
-    "main.js": "/js-band-book-online-shop/static/js/main.63d7cf2d.chunk.js",
-    "main.js.map": "/js-band-book-online-shop/static/js/main.63d7cf2d.chunk.js.map",
-    "runtime-main.js": "/js-band-book-online-shop/static/js/runtime-main.225e4f46.js",
-    "runtime-main.js.map": "/js-band-book-online-shop/static/js/runtime-main.225e4f46.js.map",
+    "main.js": "/js-band-book-online-shop/static/js/main.f6deca51.chunk.js",
+    "main.js.map": "/js-band-book-online-shop/static/js/main.f6deca51.chunk.js.map",
+    "runtime-main.js": "/js-band-book-online-shop/static/js/runtime-main.1ca6d19f.js",
+    "runtime-main.js.map": "/js-band-book-online-shop/static/js/runtime-main.1ca6d19f.js.map",
     "static/css/2.c50c2e80.chunk.css": "/js-band-book-online-shop/static/css/2.c50c2e80.chunk.css",
     "static/js/2.51b089db.chunk.js": "/js-band-book-online-shop/static/js/2.51b089db.chunk.js",
     "static/js/2.51b089db.chunk.js.map": "/js-band-book-online-shop/static/js/2.51b089db.chunk.js.map",
     "static/css/3.48f7583f.chunk.css": "/js-band-book-online-shop/static/css/3.48f7583f.chunk.css",
-    "static/js/3.77c0070d.chunk.js": "/js-band-book-online-shop/static/js/3.77c0070d.chunk.js",
-    "static/js/3.77c0070d.chunk.js.map": "/js-band-book-online-shop/static/js/3.77c0070d.chunk.js.map",
+    "static/js/3.1867a8a2.chunk.js": "/js-band-book-online-shop/static/js/3.1867a8a2.chunk.js",
+    "static/js/3.1867a8a2.chunk.js.map": "/js-band-book-online-shop/static/js/3.1867a8a2.chunk.js.map",
     "static/css/4.20f75325.chunk.css": "/js-band-book-online-shop/static/css/4.20f75325.chunk.css",
-    "static/js/4.f9bd7df1.chunk.js": "/js-band-book-online-shop/static/js/4.f9bd7df1.chunk.js",
-    "static/js/4.f9bd7df1.chunk.js.map": "/js-band-book-online-shop/static/js/4.f9bd7df1.chunk.js.map",
+    "static/js/4.446e1f5f.chunk.js": "/js-band-book-online-shop/static/js/4.446e1f5f.chunk.js",
+    "static/js/4.446e1f5f.chunk.js.map": "/js-band-book-online-shop/static/js/4.446e1f5f.chunk.js.map",
     "static/css/5.1ada2539.chunk.css": "/js-band-book-online-shop/static/css/5.1ada2539.chunk.css",
-    "static/js/5.ec9c98f8.chunk.js": "/js-band-book-online-shop/static/js/5.ec9c98f8.chunk.js",
-    "static/js/5.ec9c98f8.chunk.js.map": "/js-band-book-online-shop/static/js/5.ec9c98f8.chunk.js.map",
+    "static/js/5.76dfd71b.chunk.js": "/js-band-book-online-shop/static/js/5.76dfd71b.chunk.js",
+    "static/js/5.76dfd71b.chunk.js.map": "/js-band-book-online-shop/static/js/5.76dfd71b.chunk.js.map",
     "static/css/6.779bf787.chunk.css": "/js-band-book-online-shop/static/css/6.779bf787.chunk.css",
-    "static/js/6.2fea1390.chunk.js": "/js-band-book-online-shop/static/js/6.2fea1390.chunk.js",
-    "static/js/6.2fea1390.chunk.js.map": "/js-band-book-online-shop/static/js/6.2fea1390.chunk.js.map",
+    "static/js/6.7e726565.chunk.js": "/js-band-book-online-shop/static/js/6.7e726565.chunk.js",
+    "static/js/6.7e726565.chunk.js.map": "/js-band-book-online-shop/static/js/6.7e726565.chunk.js.map",
     "static/js/7.33aed23d.chunk.js": "/js-band-book-online-shop/static/js/7.33aed23d.chunk.js",
     "static/js/7.33aed23d.chunk.js.map": "/js-band-book-online-shop/static/js/7.33aed23d.chunk.js.map",
     "index.html": "/js-band-book-online-shop/index.html",
@@ -33,10 +33,10 @@
     "static/media/default-book.png": "/js-band-book-online-shop/static/media/default-book.04210348.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.225e4f46.js",
+    "static/js/runtime-main.1ca6d19f.js",
     "static/css/2.c50c2e80.chunk.css",
     "static/js/2.51b089db.chunk.js",
     "static/css/main.d8fe2c0e.chunk.css",
-    "static/js/main.63d7cf2d.chunk.js"
+    "static/js/main.f6deca51.chunk.js"
   ]
 }
